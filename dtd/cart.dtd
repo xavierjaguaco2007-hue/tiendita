@@ -1,0 +1,6 @@
+<!ELEMENT carrito (item*)>
+<!ELEMENT item (nombre, precio, cantidad)>
+<!ATTLIST item id CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>

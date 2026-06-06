@@ -1,0 +1,310 @@
+/* ============================================
+   IMPORTACIÓN DE FUENTE MODERNA
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+
+/* ============================================
+   RESET Y VARIABLES (DARK MODE NEUMORFICO)
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at 10% 30%, #0a0f1e, #03060c);
+    color: #eef5ff;
+    line-height: 1.5;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+}
+
+/* Contenedor principal estilo glassmorphism */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: rgba(18, 25, 45, 0.55);
+    backdrop-filter: blur(12px);
+    border-radius: 2.5rem;
+    padding: 2rem 1.8rem;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(72, 187, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Tipografía y títulos */
+h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff, #9bc5ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-left: 5px solid #2dd4bf;
+    padding-left: 1.2rem;
+}
+
+/* ============================================
+   TARJETAS DE PRODUCTOS (ELEGANTES + HOVER)
+   ============================================ */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.product-card {
+    background: rgba(12, 18, 34, 0.7);
+    backdrop-filter: blur(4px);
+    border-radius: 1.8rem;
+    padding: 1.5rem;
+    transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: #2dd4bf;
+    box-shadow: 0 20px 30px -12px rgba(45, 212, 191, 0.25);
+    background: rgba(20, 28, 48, 0.8);
+}
+
+.product-card h3 {
+    font-size: 1.6rem;
+    margin: 0 0 0.5rem;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    color: #e2e8ff;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2dd4bf;
+    margin: 0.8rem 0;
+    text-shadow: 0 0 8px rgba(45, 212, 191, 0.4);
+}
+
+/* ============================================
+   BOTONES MODERNOS (EFECTO BRILLO)
+   ============================================ */
+.btn, .btn-danger, button, input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(105deg, #1e2a4e, #0f172a);
+    color: white;
+    padding: 0.75rem 1.6rem;
+    border-radius: 3rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    backdrop-filter: blur(4px);
+}
+
+.btn {
+    background: linear-gradient(105deg, #2c3e66, #1a253c);
+    border: 1px solid rgba(45, 212, 191, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(105deg, #7f1a2e, #4a0e1c);
+    border: 1px solid rgba(255, 80, 120, 0.4);
+}
+
+.btn:hover, .btn-danger:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Botón especial para acciones principales */
+.btn-primary {
+    background: linear-gradient(95deg, #2dd4bf, #14b8a6);
+    color: #0a0f1e;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(45, 212, 191, 0.4);
+}
+
+/* ============================================
+   TABLA DEL CARRITO (ESTILO FUTURISTA)
+   ============================================ */
+.cart-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    margin: 1.5rem 0;
+}
+
+.cart-table th {
+    text-align: left;
+    padding: 1rem 0.8rem;
+    background: rgba(45, 212, 191, 0.12);
+    border-radius: 1.2rem 1.2rem 0.8rem 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #a5f3e8;
+}
+
+.cart-table td {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 1.2rem 0.8rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.cart-table tr:hover td {
+    background: rgba(30, 41, 75, 0.8);
+    transform: scale(1.01);
+}
+
+.cart-table input {
+    width: 80px;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    border: 1px solid #2dd4bf60;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ============================================
+   MENSAJES (SUCCESS / ERROR) BRILLANTES
+   ============================================ */
+.success, .error {
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    font-weight: 500;
+    backdrop-filter: blur(8px);
+    animation: fadeSlide 0.4s ease;
+}
+
+.success {
+    background: rgba(16, 185, 129, 0.2);
+    border-left: 5px solid #10b981;
+    color: #bef5e0;
+}
+
+.error {
+    background: rgba(239, 68, 68, 0.2);
+    border-left: 5px solid #ef4444;
+    color: #ffc9c9;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   ENLACES Y ELEMENTOS ADICIONALES
+   ============================================ */
+a:not(.btn) {
+    color: #67e8f9;
+    text-decoration: none;
+    border-bottom: 1px dashed #2dd4bf;
+    transition: 0.2s;
+}
+
+a:not(.btn):hover {
+    color: white;
+    border-bottom-style: solid;
+}
+
+.cart-link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(45, 212, 191, 0.3);
+}
+
+pre {
+    background: #050a15;
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    border: 1px solid #2dd4bf30;
+    color: #b9e6ff;
+}
+
+/* ============================================
+   FORMULARIO DE IMPORTACIÓN (MODERNO)
+   ============================================ */
+input[type="file"] {
+    background: #0f172a;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    border: 1px dashed #2dd4bf;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem 0;
+}
+
+/* ============================================
+   RESPONSIVE (MÓVILES)
+   ============================================ */
+@media (max-width: 780px) {
+    .container {
+        padding: 1.2rem;
+    }
+    .cart-table, .cart-table tbody, .cart-table tr, .cart-table td {
+        display: block;
+        width: 100%;
+    }
+    .cart-table thead {
+        display: none;
+    }
+    .cart-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.8rem;
+        margin-bottom: 0.6rem;
+    }
+    .cart-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #2dd4bf;
+    }
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+}
